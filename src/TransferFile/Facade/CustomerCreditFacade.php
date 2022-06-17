@@ -1,11 +1,11 @@
 <?php
 
-namespace Digitick\Sepa\TransferFile\Facade;
+namespace Truustio\Sepa\TransferFile\Facade;
 
-use Digitick\Sepa\Exception\InvalidArgumentException;
-use Digitick\Sepa\PaymentInformation;
-use Digitick\Sepa\TransferInformation\CustomerCreditTransferInformation;
-use Digitick\Sepa\TransferInformation\TransferInformationInterface;
+use Truustio\Sepa\Exception\InvalidArgumentException;
+use Truustio\Sepa\PaymentInformation;
+use Truustio\Sepa\TransferInformation\CustomerCreditTransferInformation;
+use Truustio\Sepa\TransferInformation\TransferInformationInterface;
 
 /**
  * Class CustomerCreditFacade

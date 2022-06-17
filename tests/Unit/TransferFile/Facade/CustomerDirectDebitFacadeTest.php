@@ -2,7 +2,7 @@
 /**
  * SEPA file generator.
  *
- * @copyright © Digitick <www.digitick.net> 2012-2013
+ * @copyright © Truustio <www.digitick.net> 2012-2013
  * @copyright © Blage <www.blage.net> 2013
  * @license GNU Lesser General Public License v3.0
  *
@@ -20,10 +20,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Digitick\Sepa\Tests\Unit\TransferFile\Facade;
+namespace Truustio\Sepa\Tests\Unit\TransferFile\Facade;
 
-use Digitick\Sepa\PaymentInformation;
-use Digitick\Sepa\TransferFile\Factory\TransferFileFacadeFactory;
+use Truustio\Sepa\PaymentInformation;
+use Truustio\Sepa\TransferFile\Factory\TransferFileFacadeFactory;
 use PHPUnit\Framework\TestCase;
 
 class CustomerDirectDebitFacadeTest extends TestCase

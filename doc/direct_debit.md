@@ -1,7 +1,7 @@
 ## Sample Usage DirectDebit with Factory
 ```php
-use Digitick\Sepa\TransferFile\Factory\TransferFileFacadeFactory;
-use Digitick\Sepa\PaymentInformation;
+use Truustio\Sepa\TransferFile\Factory\TransferFileFacadeFactory;
+use Truustio\Sepa\PaymentInformation;
 
 //Set the initial information
 // third parameter 'pain.008.003.02' is optional would default to 'pain.008.002.02' if not changed
@@ -40,9 +40,9 @@ $directDebit->asXML();
 
 ## Sample Usage DirectDebit with Factory and Custom Header
 ```php
-use Digitick\Sepa\TransferFile\Factory\TransferFileFacadeFactory;
-use Digitick\Sepa\PaymentInformation;
-use Digitick\Sepa\GroupHeader;
+use Truustio\Sepa\TransferFile\Factory\TransferFileFacadeFactory;
+use Truustio\Sepa\PaymentInformation;
+use Truustio\Sepa\GroupHeader;
 
 //Set the custom header (Spanish banks example) information
 $header = new GroupHeader(date('Y-m-d-H-i-s'), 'Me');

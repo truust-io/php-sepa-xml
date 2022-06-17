@@ -5,10 +5,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/PHPClass.php to edit this template
  */
 
-namespace Digitick\Sepa\Tests\Unit\DomBuilder;
+namespace Truustio\Sepa\Tests\Unit\DomBuilder;
 
-use Digitick\Sepa\DomBuilder\CustomerDirectDebitTransferDomBuilder;
-use Digitick\Sepa\GroupHeader;
+use Truustio\Sepa\DomBuilder\CustomerDirectDebitTransferDomBuilder;
+use Truustio\Sepa\GroupHeader;
 
 use PHPUnit\Framework\TestCase;
 
@@ -23,14 +23,14 @@ class CustomerDirectDebitTransferDomBuilderTest extends TestCase
         $groupHeader = new GroupHeader('TEST_DEBTOR_ADRESS', 'Test Company Inc.');
         $groupHeader->setInitiatingPartyId('DE67ZZZ00000123456');
 
-        $paymentInformation = new \Digitick\Sepa\PaymentInformation('RAND001', 'DE88500105173441451911', 'DEUTDEFFXXX', 'Test Company Inc.');
+        $paymentInformation = new \Truustio\Sepa\PaymentInformation('RAND001', 'DE88500105173441451911', 'DEUTDEFFXXX', 'Test Company Inc.');
         $paymentInformation->setCreditorId('DE67ZZZ00000123456');
         $paymentInformation->setSequenceType('FRST');
 
-        $transferFile = new \Digitick\Sepa\TransferFile\CustomerDirectDebitTransferFile($groupHeader);
+        $transferFile = new \Truustio\Sepa\TransferFile\CustomerDirectDebitTransferFile($groupHeader);
         $transferFile->addPaymentInformation($paymentInformation);
 
-        $transactionInformation = new \Digitick\Sepa\TransferInformation\CustomerDirectDebitTransferInformation(1000, 'DE40500105174181777145', 'Max Musterman');
+        $transactionInformation = new \Truustio\Sepa\TransferInformation\CustomerDirectDebitTransferInformation(1000, 'DE40500105174181777145', 'Max Musterman');
         $transactionInformation->setMandateId('TEST-MANDATE-1');
         $transactionInformation->setMandateSignDate(new \DateTime('2022-05-15'));
         $transactionInformation->setCountry('DE');

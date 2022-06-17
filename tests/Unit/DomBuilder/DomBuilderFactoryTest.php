@@ -2,7 +2,7 @@
 /**
  * SEPA file generator.
  *
- * @copyright © Digitick <www.digitick.net> 2012-2013
+ * @copyright © Truustio <www.digitick.net> 2012-2013
  * @copyright © Blage <www.blage.net> 2013
  * @license GNU Lesser General Public License v3.0
  *
@@ -20,15 +20,15 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Digitick\Sepa\Tests\Unit\DomBuilder;
+namespace Truustio\Sepa\Tests\Unit\DomBuilder;
 
-use Digitick\Sepa\DomBuilder\DomBuilderFactory;
-use Digitick\Sepa\GroupHeader;
-use Digitick\Sepa\PaymentInformation;
-use Digitick\Sepa\TransferFile\CustomerCreditTransferFile;
-use Digitick\Sepa\TransferFile\CustomerDirectDebitTransferFile;
-use Digitick\Sepa\TransferInformation\CustomerCreditTransferInformation;
-use Digitick\Sepa\TransferInformation\CustomerDirectDebitTransferInformation;
+use Truustio\Sepa\DomBuilder\DomBuilderFactory;
+use Truustio\Sepa\GroupHeader;
+use Truustio\Sepa\PaymentInformation;
+use Truustio\Sepa\TransferFile\CustomerCreditTransferFile;
+use Truustio\Sepa\TransferFile\CustomerDirectDebitTransferFile;
+use Truustio\Sepa\TransferInformation\CustomerCreditTransferInformation;
+use Truustio\Sepa\TransferInformation\CustomerDirectDebitTransferInformation;
 use PHPUnit\Framework\TestCase;
 
 class DomBuilderFactoryTest extends TestCase
@@ -43,7 +43,7 @@ class DomBuilderFactoryTest extends TestCase
         $sepaFile->addPaymentInformation($paymentInformation);
 
         $domBuilder = DomBuilderFactory::createDomBuilder($sepaFile);
-        $this->assertInstanceOf('\Digitick\Sepa\DomBuilder\CustomerCreditTransferDomBuilder', $domBuilder);
+        $this->assertInstanceOf('\Truustio\Sepa\DomBuilder\CustomerCreditTransferDomBuilder', $domBuilder);
     }
 
     public function testCreateReturnsCustomerDebitDomBuilderForCustomerDebitTransfer(): void
@@ -60,6 +60,6 @@ class DomBuilderFactoryTest extends TestCase
         $sepaFile->addPaymentInformation($paymentInformation);
 
         $domBuilder = DomBuilderFactory::createDomBuilder($sepaFile);
-        $this->assertInstanceOf('\Digitick\Sepa\DomBuilder\CustomerDirectDebitTransferDomBuilder', $domBuilder);
+        $this->assertInstanceOf('\Truustio\Sepa\DomBuilder\CustomerDirectDebitTransferDomBuilder', $domBuilder);
     }
 }

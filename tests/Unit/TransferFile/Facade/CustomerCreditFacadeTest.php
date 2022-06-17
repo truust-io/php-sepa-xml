@@ -1,8 +1,8 @@
 <?php
 
-namespace Digitick\Sepa\Tests\Unit\TransferFile\Facade;
+namespace Truustio\Sepa\Tests\Unit\TransferFile\Facade;
 
-use Digitick\Sepa\TransferFile\Factory\TransferFileFacadeFactory;
+use Truustio\Sepa\TransferFile\Factory\TransferFileFacadeFactory;
 use PHPUnit\Framework\TestCase;
 
 /**

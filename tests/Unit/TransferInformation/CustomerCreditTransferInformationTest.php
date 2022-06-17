@@ -1,8 +1,8 @@
 <?php
 
-namespace Digitick\Sepa\Tests\Unit\TransferInformation;
+namespace Truustio\Sepa\Tests\Unit\TransferInformation;
 
-use Digitick\Sepa\TransferInformation\CustomerCreditTransferInformation;
+use Truustio\Sepa\TransferInformation\CustomerCreditTransferInformation;
 use PHPUnit\Framework\TestCase;
 
 class CustomerCreditTransferInformationTest extends TestCase

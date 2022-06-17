@@ -1,8 +1,8 @@
 <?php
 
-namespace Digitick\Sepa\Tests\Unit\Util;
+namespace Truustio\Sepa\Tests\Unit\Util;
 
-use Digitick\Sepa\Util\StringHelper;
+use Truustio\Sepa\Util\StringHelper;
 use PHPUnit\Framework\TestCase;
 
 /**

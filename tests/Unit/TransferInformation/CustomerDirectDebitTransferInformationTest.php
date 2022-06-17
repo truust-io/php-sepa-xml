@@ -1,9 +1,9 @@
 <?php
 
-namespace Digitick\Sepa\Tests\Unit\TransferInformation;
+namespace Truustio\Sepa\Tests\Unit\TransferInformation;
 
-use Digitick\Sepa\Exception\InvalidArgumentException;
-use Digitick\Sepa\TransferInformation\CustomerDirectDebitTransferInformation;
+use Truustio\Sepa\Exception\InvalidArgumentException;
+use Truustio\Sepa\TransferInformation\CustomerDirectDebitTransferInformation;
 use PHPUnit\Framework\TestCase;
 
 /**

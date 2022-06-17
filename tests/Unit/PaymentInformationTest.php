@@ -4,9 +4,9 @@
  * copyright 2017 blage.net Sören Rohweder
  */
 
-namespace Digitick\Sepa\Tests\Unit;
+namespace Truustio\Sepa\Tests\Unit;
 
-use Digitick\Sepa\PaymentInformation;
+use Truustio\Sepa\PaymentInformation;
 use PHPUnit\Framework\TestCase;
 
 class PaymentInformationTest extends TestCase
