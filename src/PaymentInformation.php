@@ -148,6 +148,11 @@ class PaymentInformation
     protected $sequenceType;
 
     /**
+     * @var string|null
+     */
+    protected $serviceLevel = 'SEPA';
+
+    /**
      * Should the bank book multiple transaction as a batch
      *
      * @var bool|null
@@ -408,5 +413,15 @@ class PaymentInformation
     public function setDueDateFormat(string $format): void
     {
         $this->dateFormat = $format;
+    }
+
+    public function setServiceLevel(string $serviceLevel): void
+    {
+        $this->serviceLevel = $serviceLevel;
+    }
+
+    public function getServiceLevel(): ?string
+    {
+        return $this->serviceLevel;
     }
 }
