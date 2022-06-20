@@ -105,14 +105,7 @@ class CustomerCreditTransferDomBuilder extends BaseDomBuilder
 
         $debtorAccount = $this->createElement('DbtrAcct');
         $id = $this->createElement('Id');
-        if($paymentInformation->getAccountType()=='IBAN')
-        {
-            $id->appendChild($this->createElement('IBAN', $paymentInformation->getOriginAccountIBAN()));
-        } else {
-            $otherId = $this->createElement('Othr');
-            $otherId->appendChild($this->createElement('Id', $paymentInformation->getOriginAccountIBAN()));
-            $id->appendChild($otherId);
-        }
+        $id->appendChild($this->createElement('IBAN', $paymentInformation->getOriginAccountIBAN()));
         $debtorAccount->appendChild($id);
         if ($paymentInformation->getOriginAccountCurrency()) {
             $debtorAccount->appendChild($this->createElement('Ccy', $paymentInformation->getOriginAccountCurrency()));
@@ -177,7 +170,15 @@ class CustomerCreditTransferDomBuilder extends BaseDomBuilder
         // CreditorAccount 2.80
         $creditorAccount = $this->createElement('CdtrAcct');
         $id = $this->createElement('Id');
-        $id->appendChild($this->createElement('IBAN', $transactionInformation->getIban()));
+        if($transactionInformation->getAccountType()=='IBAN')
+        {
+            $id->appendChild($this->createElement('IBAN', $transactionInformation->getIban()));
+        } else {
+            $otherId = $this->createElement('Othr');
+            $otherId->appendChild($this->createElement('Id', $transactionInformation->getIban()));
+            $id->appendChild($otherId);
+        }
+
         $creditorAccount->appendChild($id);
         $CdtTrfTxInf->appendChild($creditorAccount);
 

@@ -440,4 +440,5 @@ class PaymentInformation
         return $this->chargeBearer;
     }
 
+
 }
