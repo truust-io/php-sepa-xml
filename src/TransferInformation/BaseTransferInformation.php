@@ -29,6 +29,13 @@ use Truustio\Sepa\Util\StringHelper;
 class BaseTransferInformation implements TransferInformationInterface
 {
     /**
+     * Account Type
+     *
+     * @var string
+     */
+    protected $accountType = 'IBAN';
+
+    /**
      * Account Identifier
      *
      * @var string
@@ -371,5 +378,21 @@ class BaseTransferInformation implements TransferInformationInterface
     public function setPostalAddress($postalAddress): void
     {
         $this->postalAddress = $postalAddress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAccountType()
+    {
+        return $this->accountType;
+    }
+
+    /**
+     * @param string $accountType
+     */
+    public function setAccountType(string $accountType): void
+    {
+        $this->accountType = $accountType;
     }
 }
