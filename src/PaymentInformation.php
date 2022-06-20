@@ -153,6 +153,11 @@ class PaymentInformation
     protected $serviceLevel = 'SEPA';
 
     /**
+     * @var string|null
+     */
+    protected $chargeBearer = 'SLEV';
+
+    /**
      * Should the bank book multiple transaction as a batch
      *
      * @var bool|null
@@ -424,4 +429,15 @@ class PaymentInformation
     {
         return $this->serviceLevel;
     }
+
+    public function setChargeBearer(string $chargeBearer): void
+    {
+        $this->chargeBearer = $chargeBearer;
+    }
+
+    public function getChargeBearer(): ?string
+    {
+        return $this->chargeBearer;
+    }
+
 }
