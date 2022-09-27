@@ -155,6 +155,11 @@ class PaymentInformation
     /**
      * @var string|null
      */
+    protected $serviceLevelProprietary;
+
+    /**
+     * @var string|null
+     */
     protected $chargeBearer = 'SLEV';
 
     /**
@@ -428,6 +433,16 @@ class PaymentInformation
     public function getServiceLevel(): ?string
     {
         return $this->serviceLevel;
+    }
+
+    public function setServiceLevelProprietary(string $serviceLevelProprietary): void
+    {
+        $this->serviceLevelProprietary = $serviceLevelProprietary;
+    }
+
+    public function getServiceLevelProprietary(): ?string
+    {
+        return $this->serviceLevelProprietary;
     }
 
     public function setChargeBearer(string $chargeBearer): void
